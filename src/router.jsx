@@ -8,12 +8,17 @@ import Experience from "./pages/Experience";
 import Skills from "./pages/Skills";
 import Interest from "./pages/Interest";
 import Awards from "./pages/Awards";
+import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
     children: [
+      {
+        path: "*",
+        element: <NotFound />,
+      },
       {
         path: "",
         element: <Home />,
